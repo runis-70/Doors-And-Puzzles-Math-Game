@@ -7,6 +7,7 @@ public class Follower: MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private Transform target;
+    [SerializeField] private Vector2 offset;
     //[SerializeField] private Transform leftLimit;
     //[SerializeField] private Transform rightLimit;
     //[SerializeField] private Transform downLimit;
@@ -30,8 +31,8 @@ public class Follower: MonoBehaviour
     {
         position = new Vector3
         {
-            x = target.position.x,
-            y = target.position.y,
+            x = target.position.x + offset.x,
+            y = target.position.y + offset.y,
             z = transform.position.z
         };
         transform.position = Vector3.MoveTowards(transform.position, position, speed * Time.deltaTime);

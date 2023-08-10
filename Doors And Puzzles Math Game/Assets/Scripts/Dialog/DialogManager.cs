@@ -10,7 +10,7 @@ public class DialogManager : MonoBehaviour
     [SerializeField] private DialogueWindow dialogueWindowNPC;
     [SerializeField] private InputController inputController;
     [SerializeField] private float speedText;
-    [SerializeField] private GameObject canvasDialog;
+    [SerializeField] private Canvas canvasDialog;
     [SerializeField] private UIController uIController;
     [SerializeField] private int currentIndexScene;
     private DialogueScript dialogueScript;
@@ -34,7 +34,7 @@ public class DialogManager : MonoBehaviour
 
     public void StartDialog(int indexDialogPoint)
     {
-        canvasDialog.SetActive(true);
+        canvasDialog.gameObject.SetActive(true);
         uIController.gameObject.SetActive(false);
         uIController.playerController.enabled = false;
         uIController.playerController.ZeroPhysic();
@@ -44,7 +44,7 @@ public class DialogManager : MonoBehaviour
     }
     private void EndDialog()
     {
-        canvasDialog.SetActive(false);
+        canvasDialog.gameObject.SetActive(false);
         uIController.gameObject.SetActive(true);
         uIController.playerController.enabled = true;
         inputController.Disappearance();
