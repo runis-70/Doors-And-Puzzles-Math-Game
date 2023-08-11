@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class DialogueWindow : MonoBehaviour
 {
-    public TextMeshProUGUI textDialog;
+    public Text textDialog;
     public Text textName;
     public Image Header;
     private Animator animator;

@@ -7,6 +7,7 @@ public class Follower: MonoBehaviour
 {
     [SerializeField] private float speed = 10f;
     [SerializeField] private Transform target;
+    [SerializeField] private Vector2 clamp;
     //[SerializeField] private Transform leftLimit;
     //[SerializeField] private Transform rightLimit;
     //[SerializeField] private Transform downLimit;
@@ -21,7 +22,7 @@ public class Follower: MonoBehaviour
 
     private void Start()
     {
-        transform.position = new Vector3(target.position.x, target.position.y,transform.position.z);
+        transform.position = new Vector3(target.position.x + clamp.x, target.position.y + clamp.y, transform.position.z);
         //_xOfsetClamp = Camera.main.ViewportToWorldPoint(new Vector3(0.5f, 0f, Camera.main.nearClipPlane)).x - Camera.main.ViewportToWorldPoint(new Vector3(0f, 0f, Camera.main.nearClipPlane)).x;
         //_yOfsetClamp = Camera.main.ViewportToWorldPoint(new Vector3(0f, 0.5f, Camera.main.nearClipPlane)).y - Camera.main.ViewportToWorldPoint(new Vector3(0f, 1f, Camera.main.nearClipPlane)).y;
     }
@@ -30,8 +31,8 @@ public class Follower: MonoBehaviour
     {
         position = new Vector3
         {
-            x = target.position.x,
-            y = target.position.y,
+            x = target.position.x + clamp.x,
+            y = target.position.y + clamp.y,
             z = transform.position.z
         };
         transform.position = Vector3.MoveTowards(transform.position, position, speed * Time.deltaTime);

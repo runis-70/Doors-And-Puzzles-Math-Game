@@ -7,24 +7,8 @@ using UnityEngine.UI;
 
 public class InputController : MonoBehaviour
 {
-    private Animator animator;
-    [SerializeField] private TMP_InputField inputField;
+    [SerializeField] private InputField inputField;
     public event Action<string> OnInputChanged;
-
-    private void Awake()
-    {
-        animator = GetComponent<Animator>();
-    }
-
-    public void Emergence()
-    {
-        animator.SetInteger("StateInput", 2);
-    }
-
-    public void Disappearance()
-    {
-        animator.SetInteger("StateInput", 1);
-    }
 
     public void ClearInputField()
     {

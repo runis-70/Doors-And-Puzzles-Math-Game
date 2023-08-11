@@ -3,16 +3,20 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
+    [SerializeField] private float speedText;
+    [SerializeField] private int nextIndexScene;
+    [Header("Component DialogCanvas")]
     [SerializeField] private DialogueWindow dialogueWindowPlayer;
     [SerializeField] private DialogueWindow dialogueWindowNPC;
+    [SerializeField] private EffectUIGame background;
     [SerializeField] private InputController inputController;
-    [SerializeField] private float speedText;
-    [SerializeField] private GameObject canvasDialog;
     [SerializeField] private UIController uIController;
-    [SerializeField] private int currentIndexScene;
+
+
     private DialogueScript dialogueScript;
     private bool skipDialog = false;
     private int currentIndexDialogPoint;
@@ -28,34 +32,49 @@ public class DialogManager : MonoBehaviour
     { 
         if (currentIndexDialog != - 1 && dialogueScript.dialogPoints[currentIndexDialogPoint].dialog[currentIndexDialog].Answer == inputText)
         {
-            StartCoroutine(EndDialogWaitTime(1));
+            StartCoroutine(EndDialogWithAnswerWaitTime(1));
         }
     }
 
     public void StartDialog(int indexDialogPoint)
     {
-        canvasDialog.SetActive(true);
         uIController.gameObject.SetActive(false);
         uIController.playerController.enabled = false;
         uIController.playerController.ZeroPhysic();
-        inputController.Emergence();
+        background.EmergenceTransparency();
+        inputController.GetComponent<EffectUIGame>().EmergenceLeft();
         currentIndexDialogPoint = indexDialogPoint;
         TypeLine(dialogueScript.dialogPoints[indexDialogPoint]);
     }
-    private void EndDialog()
+    private void EndDialogPoint()
     {
-        canvasDialog.SetActive(false);
-        uIController.gameObject.SetActive(true);
-        uIController.playerController.enabled = true;
-        inputController.Disappearance();
+        uIController.gameObject.SetActive(true);;
+        inputController.GetComponent<EffectUIGame>().DisappearanceRight();
         inputController.ClearInputField();
+        background.GetComponent<EffectUIGame>().DisappearanceTransparency();
+        StartCoroutine(EnablePlayer());
+        dialogueScript.dialogPoints[currentIndexDialogPoint].dialog[currentIndexDialog].EndDialog.Invoke();
+    }
+    private void EndDialogWithAnswer()
+    {
+        uIController.gameObject.SetActive(true);
+        inputController.GetComponent<EffectUIGame>().DisappearanceRight();
+        inputController.ClearInputField();
+        background.GetComponent<EffectUIGame>().DisappearanceTransparency();
+        ExitDrop(dialogueScript.dialogPoints[currentIndexDialogPoint].dialog[currentIndexDialog]);
+        StartCoroutine(EnablePlayer());
         dialogueScript.dialogPoints[currentIndexDialogPoint].dialog[currentIndexDialog].EndDialog.Invoke();
     }
 
-    private IEnumerator EndDialogWaitTime(int time)
+    private IEnumerator EndDialogWithAnswerWaitTime(int time)
     {
         yield return new WaitForSeconds(time);
-        EndDialog();
+        EndDialogWithAnswer();
+    }
+    private IEnumerator EnablePlayer()
+    {
+        yield return new WaitForSeconds(0.4f);
+        uIController.playerController.enabled = true;
     }
 
     private void Update()
@@ -71,7 +90,6 @@ public class DialogManager : MonoBehaviour
 
     IEnumerator TypeLineIE(DialogPoint dialogPoint)
     {
-
         for (int i = 0; i < dialogPoint.dialog.Count; i++)
         {
             if (dialogPoint.dialog[i].Answer.Length != 0)
@@ -106,13 +124,13 @@ public class DialogManager : MonoBehaviour
 
             if (dialogPoint.dialog[i].isFade)
             {
-                EndDialog();
-                uIController.fade.currentIndexScene = currentIndexScene;
+                EndDialogPoint();
+                uIController.fade.currentIndexScene = nextIndexScene;
                 uIController.fade.FadeBlack();
             }
 
             if (i == dialogPoint.dialog.Count - 1 && dialogPoint.dialog[i].waitSecond != -1)
-                EndDialog();
+                EndDialogWithAnswer();
 
             if (dialogPoint.dialog[i].waitSecond != -1)
                 dialogPoint.dialog[i].EndDialog.Invoke();
