@@ -28,6 +28,7 @@ public class DialogueWindow : MonoBehaviour
     }
     public void DropDown()
     {
+        gameObject.SetActive(true);
         animator.SetInteger("State", 1);
     }
     public void DropUp()

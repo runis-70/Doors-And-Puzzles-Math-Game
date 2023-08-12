@@ -77,12 +77,6 @@ public class DialogManager : MonoBehaviour
         uIController.playerController.enabled = true;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
-            skipDialog = true;
-    }
-
     public void TypeLine(DialogPoint dialogPoint)
     {
         StartCoroutine(TypeLineIE(dialogPoint));

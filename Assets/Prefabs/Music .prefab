@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7751074802334589093}
   - component: {fileID: 7751074802334589094}
-  - component: {fileID: 7751074802334589095}
-  - component: {fileID: 7751074802334589096}
+  - component: {fileID: 1203793971}
   m_Layer: 0
   m_Name: 'Music '
   m_TagString: Music
@@ -26,14 +25,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7751074802334589097}
-  m_LocalRotation: {x: 0, y: -0, z: -1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -1, w: 0}
   m_LocalPosition: {x: -6.91, y: 3.33, z: 0.31376845}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
 --- !u!82 &7751074802334589094
 AudioSource:
   m_ObjectHideFlags: 0
@@ -46,7 +45,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: -1086701808904868116, guid: 9318c59489ae8cb40a1850269989d91f, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.01
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -130,7 +129,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &7751074802334589095
+--- !u!114 &1203793971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,27 +138,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 7751074802334589097}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e466de30169fb6e4a88145be8f18a5b9, type: 3}
+  m_Script: {fileID: 11500000, guid: 2bbea430c3071dc4ab6783371ac8dbe7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGame: 0
---- !u!114 &7751074802334589096
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7751074802334589097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627d4b66f286a7840b59c207cab25cf3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mixer: {fileID: -1086701808904868116, guid: 9318c59489ae8cb40a1850269989d91f, type: 2}
+  Mixer: {fileID: -2243857354019274624, guid: 4024b0fb8a21dab4683830c35549e0a4, type: 2}
   nameKey: Music
   SoundSlider: {fileID: 0}
   OnPlayAwake: 1
   audioClip:
-  - {fileID: 8300000, guid: 991d8a36f9a03474b865365f5aa93058, type: 3}
-  MinDB: 0
-  MaxDB: 20
+  - {fileID: 8300000, guid: b4425eb2c5f11e4478fb25fd85fef8a3, type: 3}
+  MinDB: -80
+  MaxDB: 5
