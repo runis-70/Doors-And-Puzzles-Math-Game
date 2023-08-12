@@ -941,17 +941,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c65df8dbdb3b95349be520857846b3cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &890507718 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3369277533051712506, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
-  m_PrefabInstance: {fileID: 1453581890}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dcdc9a1aa69d2646802578396a7381f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &945588923 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 945588923, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
@@ -1382,7 +1371,7 @@ MonoBehaviour:
   speedText: 0.08
   nextIndexScene: 0
   dialogueWindowPlayer: {fileID: 1533552127}
-  dialogueWindowNPC: {fileID: 890507718}
+  dialogueWindowNPC: {fileID: 0}
   background: {fileID: 1810201518}
   inputController: {fileID: 1484624060}
   uIController: {fileID: 1525227084}
@@ -1865,7 +1854,7 @@ GameObject:
   - component: {fileID: 1933993155}
   m_Layer: 0
   m_Name: System
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
