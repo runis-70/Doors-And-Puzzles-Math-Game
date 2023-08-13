@@ -1255,6 +1255,10 @@ MonoBehaviour:
     - partnerDialog: {fileID: 1933993155}
       enterDrop: 2
       exitDrop: 1
+      speedText: 0.08
+      colorText: {r: 1, g: 1, b: 1, a: 1}
+      fontText: {fileID: 12800000, guid: 7eb656912aac97d478656f541412a954, type: 3}
+      fontStyleText: 0
       Sentences: 2 + 2
       Answer: 4
       EndDialog:
@@ -1286,10 +1290,15 @@ MonoBehaviour:
             m_CallState: 2
       waitSecond: -1
       isFade: 0
+      nextIndexScene: 0
   - dialog:
     - partnerDialog: {fileID: 1933993155}
       enterDrop: 2
       exitDrop: 1
+      speedText: 0.08
+      colorText: {r: 1, g: 1, b: 1, a: 1}
+      fontText: {fileID: 12800000, guid: 7eb656912aac97d478656f541412a954, type: 3}
+      fontStyleText: 0
       Sentences: 10 - 9
       Answer: 1
       EndDialog:
@@ -1321,10 +1330,15 @@ MonoBehaviour:
             m_CallState: 2
       waitSecond: -1
       isFade: 0
+      nextIndexScene: 0
   - dialog:
     - partnerDialog: {fileID: 1933993155}
       enterDrop: 2
       exitDrop: 1
+      speedText: 0.08
+      colorText: {r: 1, g: 1, b: 1, a: 1}
+      fontText: {fileID: 12800000, guid: 7eb656912aac97d478656f541412a954, type: 3}
+      fontStyleText: 0
       Sentences: 5 +5
       Answer: 10
       EndDialog:
@@ -1356,6 +1370,7 @@ MonoBehaviour:
             m_CallState: 2
       waitSecond: -1
       isFade: 0
+      nextIndexScene: 0
 --- !u!114 &1307716419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1368,8 +1383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c18dc40bbf894d48957c1aef36a1964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedText: 0.08
-  nextIndexScene: 0
   dialogueWindowPlayer: {fileID: 1533552127}
   dialogueWindowNPC: {fileID: 0}
   background: {fileID: 1810201518}
@@ -1624,6 +1637,10 @@ PrefabInstance:
     - target: {fileID: 3369277533465724181, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3369277534383227391, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7683077831051037981, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
       propertyPath: animator
