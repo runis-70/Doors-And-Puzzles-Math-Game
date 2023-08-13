@@ -7,8 +7,6 @@ using UnityEngine.UI;
 
 public class DialogManager : MonoBehaviour
 {
-    [SerializeField] private float speedText;
-    [SerializeField] private int nextIndexScene;
     [Header("Component DialogCanvas")]
     [SerializeField] private DialogueWindow dialogueWindowPlayer;
     [SerializeField] private DialogueWindow dialogueWindowNPC;
@@ -91,9 +89,15 @@ public class DialogManager : MonoBehaviour
 
             EnterDrop(dialogPoint.dialog[i]);
             DialogueWindow dialogueWindow = WhoseDialog(dialogPoint.dialog[i]);
+
+            dialogueWindow.textDialog.font = dialogPoint.dialog[i].fontText;
+            dialogueWindow.textDialog.color = dialogPoint.dialog[i].colorText;
+            dialogueWindow.textDialog.fontStyle = dialogPoint.dialog[i].fontStyleText;
+
             dialogueWindow.Header.sprite = dialogPoint.dialog[i].partnerDialog.Head;
             dialogueWindow.textName.text = dialogPoint.dialog[i].partnerDialog.Name;
             dialogueWindow.textDialog.text = null;
+
             for (int j = 0; j < dialogPoint.dialog[i].Sentences.ToCharArray().Length; j++)
             {
                 if (skipDialog)
@@ -101,7 +105,7 @@ public class DialogManager : MonoBehaviour
                 else
                 {
                     dialogueWindow.textDialog.text += dialogPoint.dialog[i].Sentences[j];
-                    yield return new WaitForSeconds(speedText);
+                    yield return new WaitForSeconds(dialogPoint.dialog[i].speedText);
                 }
             }
 
@@ -119,7 +123,7 @@ public class DialogManager : MonoBehaviour
             if (dialogPoint.dialog[i].isFade)
             {
                 EndDialogPoint();
-                uIController.fade.currentIndexScene = nextIndexScene;
+                uIController.fade.currentIndexScene = dialogPoint.dialog[i].nextIndexScene;
                 uIController.fade.FadeBlack();
             }
 
