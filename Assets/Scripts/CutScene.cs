@@ -21,6 +21,10 @@ public class CutScene : MonoBehaviour
         {
             LoadLevel(nextScene);
         }
+        else if (Input.GetKeyDown(KeyCode.Return))
+        {
+            LoadLevel(nextScene);
+        }
     }
 
     public bool IsAnimationPlaying(string animationName)
