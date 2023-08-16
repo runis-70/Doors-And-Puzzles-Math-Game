@@ -91,7 +91,7 @@ public class MusicManager : MonoBehaviour
         return SoundSlider.value;
     }
     // Для Slider чтобы изменять громкость
-    public void AllSoundsChangeVolume()
+    public void ChangeVolume()
     {
         if (Mathf.Lerp(MinDB, MaxDB, SoundSlider.value) == MinDB)
         {

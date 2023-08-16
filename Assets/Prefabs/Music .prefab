@@ -42,10 +42,10 @@ AudioSource:
   m_GameObject: {fileID: 7751074802334589097}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -1086701808904868116, guid: 9318c59489ae8cb40a1850269989d91f, type: 2}
+  OutputAudioMixerGroup: {fileID: -2243857354019274624, guid: 4024b0fb8a21dab4683830c35549e0a4, type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.4
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -146,6 +146,6 @@ MonoBehaviour:
   SoundSlider: {fileID: 0}
   OnPlayAwake: 1
   audioClip:
-  - {fileID: 8300000, guid: b4425eb2c5f11e4478fb25fd85fef8a3, type: 3}
+  - {fileID: 8300000, guid: b28455b0b042e3e43a388e1ac92e9aa2, type: 3}
   MinDB: -80
   MaxDB: 5
