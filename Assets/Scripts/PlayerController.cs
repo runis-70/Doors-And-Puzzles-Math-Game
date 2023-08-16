@@ -13,6 +13,8 @@ public class PlayerController: MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask whatLayerMask;
 
+    [HideInInspector] public bool isRight = true;
+
     private float checkRadius = 0.3f;
 
     private int score = 0;
@@ -47,9 +49,15 @@ public class PlayerController: MonoBehaviour
     private void Flip()
     {
         if (Input.GetAxis("Horizontal") > 0)
+        {
             transform.localRotation = Quaternion.Euler(0, 0, 0);
+            isRight = true;
+        }
         else if(Input.GetAxis("Horizontal") < 0)
+        {
             transform.localRotation = Quaternion.Euler(0, 180, 0);
+            isRight = false;
+        }
     }
     private void Jump()
     {
