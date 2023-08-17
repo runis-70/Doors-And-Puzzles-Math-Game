@@ -2508,7 +2508,7 @@ GameObject:
   - component: {fileID: 1486477927}
   - component: {fileID: 1486477926}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Version
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2567,7 +2567,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u0412\u0435\u0440\u0441\u0438\u044F: 0.3"
+  m_Text: "\u0412\u0435\u0440\u0441\u0438\u044F: 0.31 (Pre-Release)"
 --- !u!222 &1486477927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3050,8 +3050,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7751074802334589094, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
-      propertyPath: m_PlayOnAwake
+      propertyPath: Loop
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751074802334589094, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
+      propertyPath: m_Volume
+      value: 0.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751074802334589094, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a6a1e71a13de74743bbc4114ab6a465c, type: 3}
+    - target: {fileID: 7751074802334589094, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7751074802334589097, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
       propertyPath: m_Name
