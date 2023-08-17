@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1765586730798302839}
   - component: {fileID: 1765586730798302836}
   - component: {fileID: 7294014568307430472}
+  - component: {fileID: 6599862209286021093}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Sound
@@ -146,5 +147,17 @@ MonoBehaviour:
   SoundSlider: {fileID: 0}
   OnPlayAwake: 1
   audioClip: []
-  MinDB: 0
-  MaxDB: 0
+  MinDB: -80
+  MaxDB: 10
+--- !u!114 &6599862209286021093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1765586730798302843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2747f0261b296e04a8acf50b6ce56d8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

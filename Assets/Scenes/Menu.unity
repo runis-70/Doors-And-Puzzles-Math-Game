@@ -496,10 +496,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1631467421}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 536867884}
+        m_TargetAssemblyTypeName: MenuUIController, Assembly-CSharp
+        m_MethodName: ApllicationQuit
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2872,14 +2872,6 @@ PrefabInstance:
       value: Sound
       objectReference: {fileID: 0}
     - target: {fileID: 7294014568307430472, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
-      propertyPath: MaxDB
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294014568307430472, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
-      propertyPath: MinDB
-      value: -80
-      objectReference: {fileID: 0}
-    - target: {fileID: 7294014568307430472, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
       propertyPath: SoundSlider
       value: 
       objectReference: {fileID: 851827811}
@@ -3010,10 +3002,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1203793971, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
-      propertyPath: MaxDB
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1203793971, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
       propertyPath: SoundSlider
       value: 
       objectReference: {fileID: 438240412}
@@ -3059,6 +3047,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7751074802334589093, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7751074802334589094, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7751074802334589097, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}

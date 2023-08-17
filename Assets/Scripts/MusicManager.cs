@@ -31,15 +31,16 @@ public class MusicManager : MonoBehaviour
             {
                 Mixer.audioMixer.SetFloat(nameKey, -80f);
             }
+
+            if (OnPlayAwake)
+            {
+                Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, SoundSlider.value));
+                OnPlayLoop(0);
+            }
             else
             {
                 Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, SoundSlider.value));
             }
-        }
-        if (OnPlayAwake)
-        {
-            Mixer.audioMixer.SetFloat(nameKey, MaxDB);
-            OnPlayLoop(0);
         }
     }
     // Чтобы запускать музыку один раз

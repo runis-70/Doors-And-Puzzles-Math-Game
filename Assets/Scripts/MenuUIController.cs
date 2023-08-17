@@ -39,4 +39,9 @@ public class MenuUIController : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
+    public void ApllicationQuit()
+    {
+        Application.Quit();
+    }
 }
