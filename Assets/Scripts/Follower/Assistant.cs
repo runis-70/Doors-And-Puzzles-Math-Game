@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Assistant : Follower
 {
-    public PlayerController player;
+    public Player player;
 
     private void FixedUpdate()
     {

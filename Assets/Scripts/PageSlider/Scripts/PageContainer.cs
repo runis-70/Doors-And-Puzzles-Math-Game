@@ -12,7 +12,7 @@ namespace TS.PageSlider
         #region Variables
 
         [Header("Children")]
-        [SerializeField] private PageView _page;
+        public PageView _page;
 
         #endregion
 

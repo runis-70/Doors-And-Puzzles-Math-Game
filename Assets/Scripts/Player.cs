@@ -4,7 +4,7 @@ using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class PlayerController: MonoBehaviour
+public class Player: MonoBehaviour
 {
     [SerializeField] private float speed;
 

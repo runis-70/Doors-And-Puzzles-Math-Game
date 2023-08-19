@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
-    public PlayerController playerController;
+    public Player playerController;
     [SerializeField] private Text scoreText;
 
     [SerializeField] private GameObject losePanel;
