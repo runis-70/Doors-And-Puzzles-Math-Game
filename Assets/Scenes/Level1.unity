@@ -347,7 +347,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &193255490 stripped
 Transform:
@@ -960,7 +960,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &642511197 stripped
 MonoBehaviour:
@@ -1125,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306511931315480221, guid: 3a6db506c89025a46b9e78c7f4077f33, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3306511931315480221, guid: 3a6db506c89025a46b9e78c7f4077f33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1780,7 +1780,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306511931315480221, guid: 3a6db506c89025a46b9e78c7f4077f33, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 3306511931315480221, guid: 3a6db506c89025a46b9e78c7f4077f33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2251,7 +2251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306511931315480221, guid: 3a6db506c89025a46b9e78c7f4077f33, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3306511931315480221, guid: 3a6db506c89025a46b9e78c7f4077f33, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2328,7 +2328,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 7ed93badf42e1de4092471bd0630d0e1, type: 3}
     - target: {fileID: 7751074802334589093, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7751074802334589093, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2407,7 +2407,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1307716418
 MonoBehaviour:
@@ -2558,8 +2558,15 @@ MonoBehaviour:
       colorText: {r: 1, g: 1, b: 1, a: 1}
       fontText: {fileID: 12800000, guid: 7eb656912aac97d478656f541412a954, type: 3}
       fontStyleText: 0
-      Sentences: 5 +5
-      Answer: 10
+      Sentences: "\u041A\u0430\u043A\u0430\u044F \u0441\u0443\u043C\u043C\u0430 \u0431\u044B\u043B\u0430
+        \u043F\u043E\u043B\u043E\u0436\u0435\u043D\u0430 \u0432 \u0431\u0430\u043D\u043A,
+        \u0432\u044B\u043F\u043B\u0430\u0447\u0438\u0432\u0430\u044E\u0449\u0438\u0439
+        \u0434\u043E\u0445\u043E\u0434 \u0432 \u0440\u0430\u0437\u043C\u0435\u0440\u0435
+        7% \u0433\u043E\u0434\u043E\u0432\u044B\u0445, \u0435\u0441\u043B\u0438 \u0432\u0435\u043B\u0438\u0447\u0438\u043D\u0430
+        \u0432\u043A\u043B\u0430\u0434\u0430 \u043F\u043E \u0438\u0441\u0442\u0435\u0447\u0435\u043D\u0438\u0438
+        \u0433\u043E\u0434\u0430 \u0441\u043E\u0441\u0442\u0430\u0432\u0438\u043B\u0430
+        13 375 \u0440.?"
+      Answer: 12500
       EndDialog:
         m_PersistentCalls:
           m_Calls:
@@ -2598,8 +2605,13 @@ MonoBehaviour:
       colorText: {r: 1, g: 1, b: 1, a: 1}
       fontText: {fileID: 12800000, guid: 7eb656912aac97d478656f541412a954, type: 3}
       fontStyleText: 0
-      Sentences: 5 + 6
-      Answer: 11
+      Sentences: "\u0421\u0432\u0435\u0436\u0438\u0435 \u0433\u0440\u0438\u0431\u044B
+        \u0441\u043E\u0434\u0435\u0440\u0436\u0430\u0442 90% \u0432\u043E\u0434\u044B,
+        \u0430 \u0441\u0443\u0448\u0435\u043D\u044B\u0435 - 12%. \u0421\u043A\u043E\u043B\u044C\u043A\u043E
+        \u0441\u0443\u0448\u0435\u043D\u044B\u0445 \u0433\u0440\u0438\u0431\u043E\u0432
+        \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F \u0438\u0437 22 \u043A\u0433
+        \u0441\u0432\u0435\u0436\u0438\u0445? "
+      Answer: 2,5
       EndDialog:
         m_PersistentCalls:
           m_Calls:
@@ -3116,7 +3128,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3369277533465724181, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3369277533465724181, guid: 62e1f9fb11c84704c8d68d2dd5c73c04, type: 3}
       propertyPath: m_AnchorMax.x
@@ -3338,7 +3350,7 @@ RectTransform:
   - {fileID: 838412234}
   - {fileID: 30107081}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -3701,7 +3713,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1919060572
 GameObject:
@@ -3831,7 +3843,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2001264072
 GameObject:
@@ -4001,7 +4013,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3028775452721170692, guid: ccfd2de869c23fa468759c59cda0fd8a, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3028775452721170692, guid: ccfd2de869c23fa468759c59cda0fd8a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4143,7 +4155,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1765586730798302839, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 1765586730798302839, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
       propertyPath: m_LocalPosition.x
