@@ -55,6 +55,18 @@ public class UIController : MonoBehaviour
     public void LoadLevel(int buildIndex)
     {
         fade.currentIndexScene = buildIndex;
+        if (panels != null)
+        {
+            for (int i = 0; i < panels.transform.childCount; i++)
+            {
+                if (panels.transform.GetChild(i).gameObject.activeInHierarchy)
+                {
+                    panels.transform.GetChild(i).gameObject.SetActive(false);
+                    Time.timeScale = 1f;
+                }
+            }
+
+        }
         fade.FadeBlack();
     }
     public void ChangeTimeScale(int timeScale)
