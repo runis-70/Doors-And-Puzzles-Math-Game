@@ -6,7 +6,7 @@ using UnityEngine;
 [Serializable]
 public class ReservationElementUIData
 {
-    public int indexReservationElementUI = 0;
+    public int indexReservationElementUI = -1;
     public bool isFull = false;
     public string path = "";
 }

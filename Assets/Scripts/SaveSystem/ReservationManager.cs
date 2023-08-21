@@ -206,6 +206,18 @@ onClick.RemoveAllListeners();
                                     ReservationElementUIData reservationElementUIData = FindReservationElementDataOfIndex(pageSafes[i].reservationElements[j].indexReservationElement);
                                     saveManagerIO = new ReservationManagerIO(reservationElementUIData.path);
                                     saveManagerIO.Delete();
+
+                                    saveManagerIO = new ReservationManagerIO(pathToApplicationFile);
+
+                                    reservationElementUIData.indexReservationElementUI = -1;
+                                    reservationElementUIData.isFull = false;
+                                    reservationElementUIData.path = "";
+
+                                    AddReservationElementDataOfIndex(indexReservation, reservationElementUIData);
+
+                                    applicationData.reservationElementUIData = reservationElementUIDatas;
+
+                                    saveManagerIO.CreateReservationApplicationData(applicationData);
                                 }
                             }
                         }
