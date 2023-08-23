@@ -31,5 +31,6 @@ public class Fade : MonoBehaviour
     public void LoadScene()
     {
         SceneManager.LoadScene(currentIndexScene);
+        
     }
 }
