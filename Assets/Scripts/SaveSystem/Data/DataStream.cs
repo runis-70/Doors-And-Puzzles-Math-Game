@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+using Unity.Mathematics;
 using UnityEditor;
 using UnityEngine;
 
@@ -44,6 +45,17 @@ public class DataStream : IDisposable
             return;
         else
             File.Delete(path);
+    }
+
+    public void DeleteAll(string path)
+    {
+        string[] files = Directory.GetFiles(path);
+
+        for (int i = 0; i < files.Length; i++)
+        {
+            File.Delete(files[i]);
+        }
+
     }
 
     public int CountSymbolInFile(string path)
