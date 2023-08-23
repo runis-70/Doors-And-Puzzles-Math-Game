@@ -28,22 +28,22 @@ public class ReservationElementUI : MonoBehaviour
 
     public void OnDrawReservationElement(bool isFull)
     {
-        if (isFull == false)
-        {
-            for (int i = 0; i < transform.childCount; i++)
-            {
-                transform.GetChild(i).gameObject.SetActive(false);
-            }
-            imageNullSafe.gameObject.SetActive(true);
-            DetermineStateReservation(isFull);
-        }
-        else
+        if (isFull)
         {
             for (int i = 0; i < transform.childCount; i++)
             {
                 transform.GetChild(i).gameObject.SetActive(true);
             }
             imageNullSafe.gameObject.SetActive(false);
+            DetermineStateReservation(isFull);
+        }
+        else
+        {
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                transform.GetChild(i).gameObject.SetActive(false);
+            }
+            imageNullSafe.gameObject.SetActive(true);
             DetermineStateReservation(isFull);
         }
     }
@@ -72,14 +72,16 @@ public class ReservationElementUI : MonoBehaviour
             if (isFull == true)
             {
                 buttonCreateReservation.gameObject.SetActive(false);
-                buttonLoadReservation.gameObject.SetActive(false);
+                buttonLoadReservation.gameObject.SetActive(true);
             }
             else
             {
                 buttonCreateReservation.gameObject.SetActive(false);
-                buttonLoadReservation.gameObject.SetActive(true);
-                buttonLoadReservation.onClick.AddListener(OnClickLoadReservation);
+                buttonLoadReservation.gameObject.SetActive(true);               
             }
+
+            buttonLoadReservation.onClick.RemoveAllListeners();
+            buttonLoadReservation.onClick.AddListener(OnClickLoadReservation);
         }
         else if (stateReservationElementUI == StateReservationElementUI.CreateReservation)
         {
@@ -92,8 +94,10 @@ public class ReservationElementUI : MonoBehaviour
             {
                 buttonLoadReservation.gameObject.SetActive(false);
                 buttonCreateReservation.gameObject.SetActive(true);
-                buttonCreateReservation.onClick.AddListener(OnClickCreateReservation);
             }
+
+            buttonCreateReservation.onClick.RemoveAllListeners();
+            buttonCreateReservation.onClick.AddListener(OnClickCreateReservation);
         }
     }
 
@@ -102,14 +106,29 @@ public class ReservationElementUI : MonoBehaviour
         OnClickRemoveReservationEvent?.Invoke(indexReservationElement);
     }
 
+    public void ClearSubscribersRemoveReservation()
+    {
+        OnClickRemoveReservationEvent = null;
+    }
+
     private void OnClickLoadReservation()
     {
         OnClickLoadReservationEvent?.Invoke(indexReservationElement);
     }
 
+    public void ClearSubscribersLoadReservation()
+    {
+        OnClickLoadReservationEvent = null;
+    }
+
     private void OnClickCreateReservation()
     {
         OnClickCreateReservationEvent?.Invoke(indexReservationElement);
+    }
+
+    public void ClearSubscribersCreateReservation()
+    {
+        OnClickCreateReservationEvent = null;
     }
 }
 

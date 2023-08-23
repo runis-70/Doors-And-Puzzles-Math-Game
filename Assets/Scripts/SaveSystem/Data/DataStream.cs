@@ -7,7 +7,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-public class DataStream
+public class DataStream : IDisposable
 {
     private FileStream stream;
 
@@ -57,5 +57,15 @@ public class DataStream
     public bool IsCreateFileSave(string path)
     {
         return File.Exists(path);
+    }
+
+    public void Dispose()
+    {
+        stream.Close();
+    }
+
+    ~DataStream() 
+    { 
+    Dispose();
     }
 }

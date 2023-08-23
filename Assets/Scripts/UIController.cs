@@ -9,8 +9,6 @@ public class UIController : MonoBehaviour
     public Player playerController;
     [SerializeField] private Text scoreText;
 
-    [SerializeField] private GameObject losePanel;
-    [SerializeField] private GameObject winPanel;
     public Fade fade;
 
     [SerializeField] private GameObject panels;
@@ -26,7 +24,7 @@ public class UIController : MonoBehaviour
                     panels.transform.GetChild(i).gameObject.SetActive(false);
                     Time.timeScale = 1f;
                 }
-                else if (panels.transform.GetChild(i).gameObject.tag == "Pause" && losePanel.gameObject.activeInHierarchy == false && winPanel.gameObject.activeInHierarchy == false)
+                else if (panels.transform.GetChild(i).gameObject.tag == "Pause")
                 {
                     panels.transform.GetChild(i).gameObject.SetActive(true);
                     Time.timeScale = 0f;
@@ -72,21 +70,6 @@ public class UIController : MonoBehaviour
     public void ChangeTimeScale(int timeScale)
     {
         Time.timeScale = timeScale;
-    }
-
-    public void Lose()
-    {
-        Time.timeScale = 0f;
-        losePanel.SetActive(true);
-        playerController.enabled = false;
-        playerController.ZeroPhysic();
-    }
-    public void Win()
-    {
-        Time.timeScale = 0f;
-        winPanel.SetActive(true);
-        playerController.enabled = false;
-        playerController.ZeroPhysic();
     }
 
     public void SetActiveUI(GameObject gameObject)
