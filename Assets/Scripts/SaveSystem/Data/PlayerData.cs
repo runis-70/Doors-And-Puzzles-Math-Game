@@ -13,9 +13,19 @@ public class PlayerData
     {
         position = new float[3]
         {
-        player.transform.position.x,
-        player.transform.position.y,
-        player.transform.position.z,
+        player.transform.localPosition.x,
+        player.transform.localPosition.y,
+        player.transform.localPosition.z,
         };
+    }
+
+    public void FillDataToPlayer(Player player)
+    {
+        player.transform.position
+            = new Vector3(
+            position[0],
+            position[1],
+            position[2]
+            );
     }
 }

@@ -6,7 +6,7 @@ public class PageReservation : MonoBehaviour
 {
     [SerializeField][HideInInspector] public List<ReservationElementUI> reservationElements;
 
-    private void Awake()
+    public void Initialization()
     {
         for (int i = 0; i < transform.childCount; i++)
         {
