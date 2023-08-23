@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ApplicationData
 {
     public List<ReservationElementUIData> reservationElementUIData;
+    public PlayerData playerData;
 
     public ApplicationData()
     {

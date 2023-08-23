@@ -9,6 +9,7 @@ TagManager:
   - Effect
   - Yes
   - ReservationManager
+  - Pause
   layers:
   - Default
   - TransparentFX
