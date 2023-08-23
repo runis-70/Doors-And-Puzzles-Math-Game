@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,25 +8,25 @@ using UnityEngine.TextCore.Text;
 [System.Serializable]
 public class Dialog
 {
-    [Header("Участник диалога")]
+    [Header("Г“Г·Г Г±ГІГ­ГЁГЄ Г¤ГЁГ Г«Г®ГЈГ ")]
     public PartnerDialog partnerDialog;
-    [Header("Анимации начала и конца диалога")]
+    [Header("ГЂГ­ГЁГ¬Г Г¶ГЁГЁ Г­Г Г·Г Г«Г  ГЁ ГЄГ®Г­Г¶Г  Г¤ГЁГ Г«Г®ГЈГ ")]
     public DropEnum enterDrop;
     public DropEnum exitDrop;
-    [Header("Скорость текста в диалоги")]
+    [Header("Г‘ГЄГ®Г°Г®Г±ГІГј ГІГҐГЄГ±ГІГ  Гў Г¤ГЁГ Г«Г®ГЈГЁ")]
     public float speedText;
-    [Header("Настройка текста диалога")]
+    [Header("ГЌГ Г±ГІГ°Г®Г©ГЄГ  ГІГҐГЄГ±ГІГ  Г¤ГЁГ Г«Г®ГЈГ ")]
     public Color colorText = Color.white;
     public Font fontText;
     public FontStyle fontStyleText;
-    [Header("Предложения и ответы")]
+    [Header("ГЏГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГї ГЁ Г®ГІГўГҐГІГ»")]
     public string Sentences;
     public string Answer;
-    [Header("События конца диалога")]
+    [Header("Г‘Г®ГЎГ»ГІГЁГї ГЄГ®Г­Г¶Г  Г¤ГЁГ Г«Г®ГЈГ ")]
     public UnityEvent EndDialog;
-    [Header("Ожидание диалога")]
+    [Header("ГЋГ¦ГЁГ¤Г Г­ГЁГҐ Г¤ГЁГ Г«Г®ГЈГ ")]
     public float waitSecond;
-    [Header("Переключения на следующию сцену")]
+    [Header("ГЏГҐГ°ГҐГЄГ«ГѕГ·ГҐГ­ГЁГї Г­Г  Г±Г«ГҐГ¤ГіГѕГ№ГЁГѕ Г±Г¶ГҐГ­Гі")]
     public bool isFade = false;
     public int nextIndexScene;
 }
