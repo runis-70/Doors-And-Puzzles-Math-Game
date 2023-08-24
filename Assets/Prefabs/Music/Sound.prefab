@@ -147,7 +147,7 @@ MonoBehaviour:
   SoundSlider: {fileID: 0}
   OnPlayAwake: 1
   audioClip: []
-  MinDB: -80
+  MinDB: -40
   MaxDB: 10
 --- !u!114 &6599862209286021093
 MonoBehaviour:

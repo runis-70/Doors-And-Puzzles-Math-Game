@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Audio;
 using Unity.VisualScripting;
+using System;
 
 public class MusicManager : MonoBehaviour
 {
@@ -20,8 +21,7 @@ public class MusicManager : MonoBehaviour
     [Range(-100f, 20f)]
     [SerializeField] private float MaxDB;
 
-
-    public void Start()
+    public void Awake()
     {
         Audio = GetComponent<AudioSource>();
         if (SoundSlider != null)
@@ -31,18 +31,56 @@ public class MusicManager : MonoBehaviour
             {
                 Mixer.audioMixer.SetFloat(nameKey, -80f);
             }
-
-            if (OnPlayAwake)
-            {
-                Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, SoundSlider.value));
-                OnPlayLoop(0);
-            }
             else
             {
                 Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, SoundSlider.value));
             }
         }
+        else
+        {
+            if (PlayerPrefs.HasKey(nameKey) )
+                Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, PlayerPrefs.GetFloat(nameKey, 1f)));
+            else
+                Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, 1));
+
+            if (OnPlayAwake)
+                OnPlayLoop(0);
+        }
     }
+
+    private IEnumerator DecayIEnumarator(float time)
+    {
+        float volume;
+        Mixer.audioMixer.GetFloat(nameKey, out volume);
+
+        while (volume > MinDB)
+        {
+            volume -= -MinDB * Time.deltaTime / time;
+            Mixer.audioMixer.SetFloat(nameKey, volume);
+            yield return null;
+        }
+    }
+    private IEnumerator ResurrectionIEnumarator(float time)
+    {
+        float tempVolume = 0;
+
+        if (PlayerPrefs.HasKey(nameKey))
+            Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, PlayerPrefs.GetFloat(nameKey, 1f)));
+        else
+            Mixer.audioMixer.SetFloat(nameKey, Mathf.Lerp(MinDB, MaxDB, 1));
+
+        Mixer.audioMixer.GetFloat(nameKey, out tempVolume);
+        Mixer.audioMixer.SetFloat(nameKey, MinDB);
+        float volume = MinDB;
+
+        while (tempVolume > volume)
+        {
+            volume += -MinDB * Time.deltaTime / time;
+            Mixer.audioMixer.SetFloat(nameKey, volume);
+            yield return null;
+        }
+    }
+
     // Чтобы запускать музыку один раз
     public void OnPlayOneShot(int number)
     {
@@ -114,5 +152,14 @@ public class MusicManager : MonoBehaviour
     public void OffSound()
     {
         Audio.mute = false;
+    }
+
+    public void SoundDecay(float time)
+    {
+        StartCoroutine(DecayIEnumarator(time));
+    }
+    public void SoundResurrection(float time)
+    {
+        StartCoroutine(ResurrectionIEnumarator(time));
     }
 }

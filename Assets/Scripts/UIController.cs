@@ -6,9 +6,8 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [SerializeField] private MusicManager musicManager;
     public Player playerController;
-    [SerializeField] private Text scoreText;
-
     public Fade fade;
 
     [SerializeField] private GameObject panels;
@@ -37,16 +36,8 @@ public class UIController : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
-        playerController.OnRecountedScore += PlayerController_OnRecountedScore;
+        musicManager.SoundResurrection(1f);
         fade.FadeWhite();
-    }
-
-    private void PlayerController_OnRecountedScore(int score)
-    {
-        if (scoreText != null)
-        {
-            scoreText.text = "Score: " + score;
-        }
     }
 
 
@@ -65,6 +56,7 @@ public class UIController : MonoBehaviour
             }
 
         }
+        musicManager.SoundDecay(1f);
         fade.FadeBlack();
     }
     public void ChangeTimeScale(int timeScale)

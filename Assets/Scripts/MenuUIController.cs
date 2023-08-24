@@ -9,6 +9,7 @@ public class MenuUIController : MonoBehaviour
     [SerializeField] private Button buttonBegin;
     [SerializeField] private Button buttonContinue;
     [SerializeField] private Button buttonNewGame;
+    [SerializeField] private MusicManager musicManager;
     public Fade fade;
 
     private ReservationManagerIO saveManagerIO;
@@ -44,6 +45,7 @@ public class MenuUIController : MonoBehaviour
     public void LoadLevel(int buildIndex)
     {
         fade.currentIndexScene = buildIndex;
+        musicManager.SoundDecay(1f);
         fade.FadeBlack();
     }
     public void ChangeTimeScale(int timeScale)

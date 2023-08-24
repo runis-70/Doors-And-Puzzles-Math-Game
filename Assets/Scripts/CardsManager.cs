@@ -63,12 +63,12 @@ public class CardsManager : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(BoxCollider2D col)
-    {
-        if (col.gameObject.tag == "Player")
-        {
-            TerminalPanel.SetActive(true);
-        }
-    }
+    //private void OnTriggerEnter2D(BoxCollider2D col)
+    //{
+    //    if (col.gameObject.tag == "Player")
+    //    {
+    //        TerminalPanel.SetActive(true);
+    //    }
+    //}
 
 }
