@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public class CutScene : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CutScene : MonoBehaviour
     [SerializeField] private Animator cutSceneText;
     [SerializeField] private string animationName;
     [SerializeField] private int nextScene;
+    [SerializeField] private ParticleSystem particle;
 
     private void Start()
     {
@@ -37,10 +39,10 @@ public class CutScene : MonoBehaviour
         return false;
     }
 
-
     public void LoadLevel(int buildIndex)
     {
         fade.currentIndexScene = buildIndex;
+        fade.particle = particle;
         musicManager.SoundDecay(1f);
         fade.FadeBlack();
     }

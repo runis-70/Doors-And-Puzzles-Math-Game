@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 public class MenuUIController : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class MenuUIController : MonoBehaviour
     [SerializeField] private Button buttonContinue;
     [SerializeField] private Button buttonNewGame;
     [SerializeField] private MusicManager musicManager;
+    [SerializeField] private ParticleSystem particle;
     public Fade fade;
 
     private ReservationManagerIO saveManagerIO;
@@ -45,8 +47,13 @@ public class MenuUIController : MonoBehaviour
     public void LoadLevel(int buildIndex)
     {
         fade.currentIndexScene = buildIndex;
+        fade.particle = particle;
         musicManager.SoundDecay(1f);
         fade.FadeBlack();
+    }
+    public void DisableParticle()
+    {
+        particle.transform.position = new Vector3(particle.transform.position.x, particle.transform.position.y, -12);
     }
     public void ChangeTimeScale(int timeScale)
     {
