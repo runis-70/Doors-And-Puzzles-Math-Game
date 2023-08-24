@@ -5,6 +5,7 @@ using UnityEngine;
 public class CutScene : MonoBehaviour
 {
     public Fade fade;
+    [SerializeField] private MusicManager musicManager;
     [SerializeField] private Animator cutSceneText;
     [SerializeField] private string animationName;
     [SerializeField] private int nextScene;
@@ -12,6 +13,7 @@ public class CutScene : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
+        musicManager.SoundResurrection(1f);
         fade.FadeWhite();
     }
 
@@ -39,6 +41,7 @@ public class CutScene : MonoBehaviour
     public void LoadLevel(int buildIndex)
     {
         fade.currentIndexScene = buildIndex;
+        musicManager.SoundDecay(1f);
         fade.FadeBlack();
     }
 }

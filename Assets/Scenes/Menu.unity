@@ -987,6 +987,7 @@ MonoBehaviour:
   buttonBegin: {fileID: 1867827742}
   buttonContinue: {fileID: 563210170}
   buttonNewGame: {fileID: 1041083437}
+  musicManager: {fileID: 1009048351}
   fade: {fileID: 232250627}
 --- !u!114 &536867885
 MonoBehaviour:
@@ -2378,7 +2379,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u0412\u0435\u0440\u0441\u0438\u044F: 0.31 (Pre-Release)"
+  m_Text: "\u0412\u0435\u0440\u0441\u0438\u044F: 0.46 (Pre-Release)"
 --- !u!222 &1486477927
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2533,10 +2534,15 @@ PrefabInstance:
       value: Sound
       objectReference: {fileID: 0}
     - target: {fileID: 7294014568307430472, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
+      propertyPath: MinDB
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 7294014568307430472, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
       propertyPath: SoundSlider
       value: 
       objectReference: {fileID: 851827811}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6599862209286021093, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7f799404c44bcc64da4bd50fff7a3595, type: 3}
 --- !u!224 &1645543543 stripped
 RectTransform:
@@ -2711,6 +2717,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1203793971, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
+      propertyPath: MinDB
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 1203793971, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
       propertyPath: SoundSlider
       value: 
       objectReference: {fileID: 438240412}
@@ -2778,7 +2788,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Music '
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1044168868147003953, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 108edc9b5446beb47b150ca86c8296f4, type: 3}
 --- !u!1 &1867827740
 GameObject:
