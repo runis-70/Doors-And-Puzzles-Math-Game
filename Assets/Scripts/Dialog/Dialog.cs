@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.TextCore.Text;
+using UnityEngine.UI;
 
 [System.Serializable]
 public class Dialog
@@ -26,6 +27,9 @@ public class Dialog
     public UnityEvent EndDialog;
     [Header("Îæèäàíèå äèàëîãà")]
     public float waitSecond;
+    [Header("Использование подсказок и ответов")]
+    public UnityEvent Fiches;
+    public string OtvetText;
     [Header("Ïåðåêëþ÷åíèÿ íà ñëåäóþùèþ ñöåíó")]
     public bool isFade = false;
     public int nextIndexScene;

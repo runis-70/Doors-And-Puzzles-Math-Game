@@ -7,8 +7,12 @@ public class CardsManager : MonoBehaviour
 {
 
     public int Cards = 0;
+    public int Podskazka;
+    public int Otvet;
     public Text CardsText;
     public Text FichesText;
+    public Text PodskazkaText;
+    public Text OtvetText;
     public GameObject[] PodskazkaIcons;
     public GameObject[] OtvetIcons;
     public GameObject Terminal;
@@ -35,6 +39,7 @@ public class CardsManager : MonoBehaviour
             OtvetIcons[1].SetActive(true);
             OtvetIcons[0].SetActive(false);
             FichesText.text = "Вам выданы были выданы пропуска";
+            Otvet++;
         }
        else
         {
@@ -54,6 +59,7 @@ public class CardsManager : MonoBehaviour
             PodskazkaIcons[1].SetActive(true);
             PodskazkaIcons[0].SetActive(false);
             FichesText.text = "Вам выданы были выданы пропуска";
+            Podskazka++;
         }
         else
         {
@@ -61,6 +67,34 @@ public class CardsManager : MonoBehaviour
             PodskazkaIcons[0].SetActive(true);
             PodskazkaIcons[1].SetActive(false);
             FichesText.text = "Недостаточно карт доступа";
+        }
+    }
+
+    public void MadePodskazka()
+    {
+        if (Podskazka >= 1)
+        {
+            PodskazkaIcons[0].SetActive(true);
+            PodskazkaIcons[1].SetActive(false);
+            Podskazka--;
+        }
+        else
+        {
+            PodskazkaText.text = "Недостаточно подсказок";
+        }
+    }
+
+    public void MadeOtvet()
+    {
+        if (Podskazka >= 1)
+        {
+            OtvetIcons[0].SetActive(true);
+            OtvetIcons[1].SetActive(false);
+            Podskazka--;
+        }
+        else
+        {
+            PodskazkaText.text = "Недостаточно ответов";
         }
     }
 
