@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5127014195719726641}
   - component: {fileID: 5127014195719726640}
   - component: {fileID: 5127014195719726647}
-  - component: {fileID: 5127014195719726642}
+  - component: {fileID: 1816878593}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 5127014195719726644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.53, y: -1.61, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5127014195749862543}
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.4292453, g: 0.66552854, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 3f0b7c8748684fc4b8db7835def2c570, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -149,8 +149,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isRight: 1
---- !u!58 &5127014195719726642
-CircleCollider2D:
+--- !u!61 &1816878593
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -158,13 +158,23 @@ CircleCollider2D:
   m_GameObject: {fileID: 5127014195719726644}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: c43e0ce4d7d95b040ab2ab9f939b27fd, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.013268113, y: -0.27311867}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5, y: 5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1.662147, y: 4.4537625}
+  m_EdgeRadius: 0
 --- !u!1 &5127014195749862542
 GameObject:
   m_ObjectHideFlags: 0
@@ -189,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5127014195749862542}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.531, z: 0}
+  m_LocalPosition: {x: 0, y: -2.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

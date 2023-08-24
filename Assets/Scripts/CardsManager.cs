@@ -14,6 +14,7 @@ public class CardsManager : MonoBehaviour
     public GameObject Terminal;
     public BoxCollider2D col;
     public GameObject TerminalPanel;
+
     void Start()
     {
         col = Terminal.GetComponent<BoxCollider2D>();
@@ -62,13 +63,5 @@ public class CardsManager : MonoBehaviour
             FichesText.text = "Недостаточно карт доступа";
         }
     }
-
-    //private void OnTriggerEnter2D(BoxCollider2D col)
-    //{
-    //    if (col.gameObject.tag == "Player")
-    //    {
-    //        TerminalPanel.SetActive(true);
-    //    }
-    //}
 
 }
