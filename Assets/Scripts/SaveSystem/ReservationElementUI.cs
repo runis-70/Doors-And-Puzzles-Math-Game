@@ -2,9 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ReservationElementUI : MonoBehaviour
+public class ReservationElementUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Image imageSafe;
     public Image imageNullSafe;
@@ -21,9 +22,12 @@ public class ReservationElementUI : MonoBehaviour
     public Action<int> OnClickLoadReservationEvent;
     public Action<int> OnClickCreateReservationEvent;
 
+    private Animator animator;
+
     private void Start()
     {
         buttonRemoveReservation.onClick.AddListener(OnClickRemoveReservation);
+        animator = GetComponent<Animator>();
     }
 
     public void OnDrawReservationElement(bool isFull)
@@ -129,6 +133,17 @@ public class ReservationElementUI : MonoBehaviour
     public void ClearSubscribersCreateReservation()
     {
         OnClickCreateReservationEvent = null;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        animator.SetTrigger("Highlighted");
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        animator.SetTrigger("Highlighted");
+        animator.SetTrigger("Normal");
     }
 }
 
