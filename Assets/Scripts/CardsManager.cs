@@ -8,7 +8,7 @@ public class CardsManager : MonoBehaviour
 
     public int Cards = 0;
     public int Podskazka;
-    public int Otvet;
+    public static int Otvet;
     public Text CardsText;
     public Text FichesText;
     public Text PodskazkaText;
