@@ -29,7 +29,7 @@ public class Dialog
     public float waitSecond;
     [Header("Использование подсказок и ответов")]
     public UnityEvent Fiches;
-    public string OtvetText;
+    public static string OtvetText;
     [Header("Ïåðåêëþ÷åíèÿ íà ñëåäóþùèþ ñöåíó")]
     public bool isFade = false;
     public int nextIndexScene;

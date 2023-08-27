@@ -40,13 +40,7 @@ public class Door : MonoBehaviour
         ChangeStateDoor(StateDoor.Close);
     }
 
-    public void OpenOtvetDoor()
-    {
-        if (CardsManager.Otvet >= 1)
-        {
-            OpenDoor();
-        }
-    }
+    
 }
 
 public enum StateDoor
