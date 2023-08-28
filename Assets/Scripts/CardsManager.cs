@@ -123,6 +123,46 @@ public class CardsManager : MonoBehaviour
             {
                 PodskazkaText.text = "Ответ - 0,72";
             }
+
+            if (DoorIndex == 8)
+            {
+                PodskazkaText.text = "Ответ - 10,26 лет";
+            }
+
+            if (DoorIndex == 9)
+            {
+                PodskazkaText.text = "Ответ - 12,57 лет";
+            }
+
+            if (DoorIndex == 10)
+            {
+                PodskazkaText.text = "Ответ - 10 ч";
+            }
+
+            if (DoorIndex == 11)
+            {
+                PodskazkaText.text = "Ответ - 6,14 лет";
+            }
+
+            if (DoorIndex == 12)
+            {
+                PodskazkaText.text = "Ответ - 20 децибел";
+            }
+
+            if (DoorIndex == 13)
+            {
+                PodskazkaText.text = "Ответ - 10(19)";
+            }
+
+            if (DoorIndex == 14)
+            {
+                PodskazkaText.text = "Ответ - ";
+            }
+
+            if (DoorIndex == 15)
+            {
+                PodskazkaText.text = "Ответ - ";
+            }
         }
         else
         {
@@ -166,22 +206,23 @@ public class CardsManager : MonoBehaviour
 
             if (DoorIndex == 5)
             {
-                PodskazkaText.text = "Получите цену января, далее цену февраля от цены января, а далее от начальной цены";
-
-                if (DoorIndex == 6)
-                {
-                    PodskazkaText.text = "";
-                }
-
-                if (DoorIndex == 7)
-                {
-                    PodskazkaText.text = "Ответ - 0,72";
-                }
+                PodskazkaText.text = "Получите цену января, далее цену февраля от цены января, а далее от начальной цены";   
             }
-            else
+
+            if (DoorIndex == 6)
             {
-                PodskazkaText.text = "Недостаточно ответов";
+                PodskazkaText.text = "Премените действия с дробями";
             }
+
+            if (DoorIndex == 7)
+            {
+                PodskazkaText.text = "Упростите выражение, далее найдите значение выражения";
+            }
+
+        }
+        else
+        {
+            PodskazkaText.text = "Недостаточно ответов";
         }
     }
 
