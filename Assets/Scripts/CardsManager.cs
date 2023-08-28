@@ -156,38 +156,39 @@ public class CardsManager : MonoBehaviour
 
             if (DoorIndex == 3)
             {
-                PodskazkaText.text = "";
+                PodskazkaText.text = "Сосчитайте проценты от числа";
             }
 
             if (DoorIndex == 4)
             {
-                PodskazkaText.text = "Ответ - 2,5";
+                PodskazkaText.text = "Сосчитайте сначала свежие грибы без воды, а затем сухие без воды, применив действия с долями";
             }
 
             if (DoorIndex == 5)
             {
-                PodskazkaText.text = "Ответ - 56%";
-            }
+                PodskazkaText.text = "Получите цену января, далее цену февраля от цены января, а далее от начальной цены";
 
-            if (DoorIndex == 6)
-            {
-                PodskazkaText.text = "Ответ - 105";
-            }
+                if (DoorIndex == 6)
+                {
+                    PodskazkaText.text = "";
+                }
 
-            if (DoorIndex == 7)
-            {
-                PodskazkaText.text = "Ответ - 0,72";
+                if (DoorIndex == 7)
+                {
+                    PodskazkaText.text = "Ответ - 0,72";
+                }
             }
-        }
-        else
-        {
-            PodskazkaText.text = "Недостаточно ответов";
+            else
+            {
+                PodskazkaText.text = "Недостаточно ответов";
+            }
         }
     }
-
 
     public void PlusDoorIndex()
     {
         DoorIndex++;
     }
+
+
 }
