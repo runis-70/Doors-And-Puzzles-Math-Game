@@ -579,7 +579,7 @@ RectTransform:
   m_Children:
   - {fileID: 1098849242}
   m_Father: {fileID: 536867883}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1192,6 +1192,7 @@ RectTransform:
   m_Children:
   - {fileID: 1354568283}
   - {fileID: 1486477925}
+  - {fileID: 1686059416}
   - {fileID: 1934937811}
   - {fileID: 1247201240}
   - {fileID: 1631467422}
@@ -1199,7 +1200,6 @@ RectTransform:
   - {fileID: 345397209}
   - {fileID: 1645543543}
   - {fileID: 1205420527}
-  - {fileID: 1686059416}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1829,7 +1829,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1203444577126437323, guid: 3381dc6c44e13264387d80043f12534f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1203444577126437323, guid: 3381dc6c44e13264387d80043f12534f, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2734,7 +2734,7 @@ RectTransform:
   m_Children:
   - {fileID: 2131448266}
   m_Father: {fileID: 536867883}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2813,7 +2813,7 @@ RectTransform:
   - {fileID: 2056257865}
   - {fileID: 1059977608}
   m_Father: {fileID: 536867883}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3470,7 +3470,7 @@ GameObject:
   - component: {fileID: 1686059418}
   - component: {fileID: 1686059417}
   m_Layer: 5
-  m_Name: Version (1)
+  m_Name: Stich
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3489,7 +3489,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 536867883}
-  m_RootOrder: 9
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3773,7 +3773,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 2
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -4225,7 +4225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4628813998225037603, guid: 23bb4b3fe5efddf44b24d920daa2dfbb, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4628813998225037603, guid: 23bb4b3fe5efddf44b24d920daa2dfbb, type: 3}
       propertyPath: m_AnchorMax.x
@@ -4864,7 +4864,7 @@ RectTransform:
   - {fileID: 1867827741}
   - {fileID: 1041083436}
   m_Father: {fileID: 536867883}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5604,7 +5604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5198963125182005208, guid: 5fbb7dfc39545ef4f88916fa9286ff90, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5198963125182005208, guid: 5fbb7dfc39545ef4f88916fa9286ff90, type: 3}
       propertyPath: m_AnchorMax.x

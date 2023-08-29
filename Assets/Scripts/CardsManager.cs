@@ -34,7 +34,7 @@ public class CardsManager : MonoBehaviour
 
     public void OtvetBuy()
     {
-        if (Cards >= 30)
+        if (Cards >= 20)
         {
             Cards -= 30;
             CardsText.text = "" + Cards;
@@ -54,7 +54,7 @@ public class CardsManager : MonoBehaviour
 
     public void PodskazkaBuy()
     {
-        if (Cards >= 25)
+        if (Cards >= 10)
         {
             Cards -= 25;
             CardsText.text = "" + Cards;
@@ -121,7 +121,7 @@ public class CardsManager : MonoBehaviour
 
             if (DoorIndex == 7)
             {
-                PodskazkaText.text = "Ответ - 0,72";
+                PodskazkaText.text = "Ответ - Клавиша пробел";
             }
 
             if (DoorIndex == 8)
@@ -131,38 +131,81 @@ public class CardsManager : MonoBehaviour
 
             if (DoorIndex == 9)
             {
-                PodskazkaText.text = "Ответ - 12,57 лет";
+                PodskazkaText.text = "Ответ - 1 ч";
             }
 
             if (DoorIndex == 10)
             {
-                PodskazkaText.text = "Ответ - 10 ч";
+                PodskazkaText.text = "Ответ - 12,57 лет";
             }
 
             if (DoorIndex == 11)
             {
-                PodskazkaText.text = "Ответ - 6,14 лет";
+                PodskazkaText.text = "Ответ - 10 ч";
             }
 
             if (DoorIndex == 12)
             {
-                PodskazkaText.text = "Ответ - 20 децибел";
+                PodskazkaText.text = "Ответ - 6,14 лет";
             }
 
             if (DoorIndex == 13)
             {
-                PodskazkaText.text = "Ответ - 10(19)";
+                PodskazkaText.text = "Ответ - 20 децибел";
             }
 
             if (DoorIndex == 14)
             {
-                PodskazkaText.text = "Ответ - ";
+                PodskazkaText.text = "Ответ - 10(19)";
             }
 
             if (DoorIndex == 15)
             {
+                PodskazkaText.text = "Ответ - Клавиша пробел";
+
+            }
+
+            if (DoorIndex == 16)
+            {
+                PodskazkaText.text = "Ответ - 0";
+            }
+
+            if (DoorIndex == 17)
+            {
+                PodskazkaText.text = "Ответ - -4";
+            }
+
+            if (DoorIndex == 18)
+            {
+                PodskazkaText.text = "Ответ - (1, 1)";
+            }
+
+            if (DoorIndex == 19)
+            {
                 PodskazkaText.text = "Ответ - ";
             }
+
+            if (DoorIndex == 20)
+            {
+                PodskazkaText.text = "Ответ - 6,14 лет";
+            }
+
+            if (DoorIndex == 21)
+            {
+                PodskazkaText.text = "Ответ - 20 децибел";
+            }
+
+            if (DoorIndex == 22)
+            {
+                PodskazkaText.text = "Ответ - 10(19)";
+            }
+
+            if (DoorIndex == 23)
+            {
+                PodskazkaText.text = "Ответ - Клавиша пробел";
+
+            }
+
         }
         else
         {
@@ -216,13 +259,53 @@ public class CardsManager : MonoBehaviour
 
             if (DoorIndex == 7)
             {
-                PodskazkaText.text = "Упростите выражение, далее найдите значение выражения";
+                PodskazkaText.text = "Введите пробел в поле ответа";
+            }
+
+            if (DoorIndex == 8)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Пусть через x лет площадь леса достигнет 1200 гектаров. Тогда - 1000 * 1,02(x) = 1200 1,02(x) = 1,2";
+            }
+
+            if (DoorIndex == 9)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Пусть начальная численность популяции бактерий составляет n. Тогда через t часов численность популяции будет равна 2n. n * 2(t)";
+            }
+
+            if (DoorIndex == 10)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Пусть начальная концентрация вещества составляет c. Тогда через x лет концентрация вещества будет равна c/1000.";
+            }
+
+            if (DoorIndex == 11)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Пусть начальная численность популяции бактерий составляет n. Тогда через t часов численность популяции будет равна 2n.";
+            }
+
+            if (DoorIndex == 12)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Пусть через x лет стоимость принтера станет равной $500 рублей. Тогда..";
+            }
+
+            if (DoorIndex == 13)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Подставляя I=100, получаем: L=10log100...";
+            }
+
+            if (DoorIndex == 14)
+            {
+                PodskazkaText.text = "Продолжите вычисление - Подставляя t=20, получаем: r = 10(20) = 10(2) * 10(18) = ... ";
+            }
+
+            if (DoorIndex == 15)
+            {
+                PodskazkaText.text = "Введите пробел в поле ответа";
             }
 
         }
         else
         {
-            PodskazkaText.text = "Недостаточно ответов";
+            PodskazkaText.text = "Недостаточно подсказок";
         }
     }
 
