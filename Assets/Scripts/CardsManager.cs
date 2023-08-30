@@ -182,22 +182,22 @@ public class CardsManager : MonoBehaviour
 
             if (DoorIndex == 19)
             {
-                PodskazkaText.text = "Ответ - ";
+                PodskazkaText.text = "Ответ - (0, 3)";
             }
 
             if (DoorIndex == 20)
             {
-                PodskazkaText.text = "Ответ - 6,14 лет";
+                PodskazkaText.text = "Ответ - 4, 2";
             }
 
             if (DoorIndex == 21)
             {
-                PodskazkaText.text = "Ответ - 20 децибел";
+                PodskazkaText.text = "Ответ - (0, 0)";
             }
 
             if (DoorIndex == 22)
             {
-                PodskazkaText.text = "Ответ - 10(19)";
+                PodskazkaText.text = "Ответ - (2, 1)";
             }
 
             if (DoorIndex == 23)
@@ -206,6 +206,32 @@ public class CardsManager : MonoBehaviour
 
             }
 
+            if (DoorIndex == 24)
+            {
+                PodskazkaText.text = "Ответ - 2";
+            }
+
+            if (DoorIndex == 25)
+            {
+                PodskazkaText.text = "Ответ - n/4";
+            }
+
+            if (DoorIndex == 26)
+            {
+                PodskazkaText.text = "Ответ - 24";
+            }
+
+            if (DoorIndex == 27)
+            {
+                PodskazkaText.text = "Ответ - x=11 y=26";
+            }
+
+            if (DoorIndex == 28)
+            {
+                PodskazkaText.text = "Ответ - a(2)/8";
+            }
+
+         
         }
         else
         {
@@ -213,101 +239,9 @@ public class CardsManager : MonoBehaviour
         }
     }
 
-    public void MadePodskazka()
-    {
-        if (Podskazka >= 1)
-        {
-
-            PodskazkaIcons[0].SetActive(true);
-            PodskazkaIcons[1].SetActive(false);
-            Podskazka--;
-
-            if (DoorIndex == 0)
-            {
-                PodskazkaText.text = "Считайте сначала значение в скобках, а далее умножите его на 7,2";
-            }
-
-            if (DoorIndex == 1)
-            {
-                PodskazkaText.text = "Помните - / = дробная черта";
-            }
-
-            if (DoorIndex == 2)
-            {
-                PodskazkaText.text = "Найдите 10% от изначальной суммы и прибавьте к изначальной сумме";
-            }
-
-            if (DoorIndex == 3)
-            {
-                PodskazkaText.text = "Сосчитайте проценты от числа";
-            }
-
-            if (DoorIndex == 4)
-            {
-                PodskazkaText.text = "Сосчитайте сначала свежие грибы без воды, а затем сухие без воды, применив действия с долями";
-            }
-
-            if (DoorIndex == 5)
-            {
-                PodskazkaText.text = "Получите цену января, далее цену февраля от цены января, а далее от начальной цены";   
-            }
-
-            if (DoorIndex == 6)
-            {
-                PodskazkaText.text = "Премените действия с дробями";
-            }
-
-            if (DoorIndex == 7)
-            {
-                PodskazkaText.text = "Введите пробел в поле ответа";
-            }
-
-            if (DoorIndex == 8)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Пусть через x лет площадь леса достигнет 1200 гектаров. Тогда - 1000 * 1,02(x) = 1200 1,02(x) = 1,2";
-            }
-
-            if (DoorIndex == 9)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Пусть начальная численность популяции бактерий составляет n. Тогда через t часов численность популяции будет равна 2n. n * 2(t)";
-            }
-
-            if (DoorIndex == 10)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Пусть начальная концентрация вещества составляет c. Тогда через x лет концентрация вещества будет равна c/1000.";
-            }
-
-            if (DoorIndex == 11)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Пусть начальная численность популяции бактерий составляет n. Тогда через t часов численность популяции будет равна 2n.";
-            }
-
-            if (DoorIndex == 12)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Пусть через x лет стоимость принтера станет равной $500 рублей. Тогда..";
-            }
-
-            if (DoorIndex == 13)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Подставляя I=100, получаем: L=10log100...";
-            }
-
-            if (DoorIndex == 14)
-            {
-                PodskazkaText.text = "Продолжите вычисление - Подставляя t=20, получаем: r = 10(20) = 10(2) * 10(18) = ... ";
-            }
-
-            if (DoorIndex == 15)
-            {
-                PodskazkaText.text = "Введите пробел в поле ответа";
-            }
-
-        }
-        else
-        {
-            PodskazkaText.text = "Недостаточно подсказок";
-        }
-    }
+  
+          
+    
 
     public void PlusDoorIndex()
     {

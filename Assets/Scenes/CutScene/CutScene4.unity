@@ -511,7 +511,7 @@ MonoBehaviour:
   musicManager: {fileID: 5317582962633484022}
   cutSceneText: {fileID: 1147943800}
   animationName: CutScene1
-  nextScene: 1
+  nextScene: 0
   particle: {fileID: 8891296188027877530}
 --- !u!114 &1540933367
 MonoBehaviour:

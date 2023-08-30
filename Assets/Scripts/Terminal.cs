@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Terminal : MonoBehaviour
 {
-    [SerializeField] private CardsManager cardsManager;
+    public GameObject TerminalPanel;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
-            cardsManager.TerminalPanel.SetActive(true);
+            TerminalPanel.SetActive(true);
         }
     }
 }
