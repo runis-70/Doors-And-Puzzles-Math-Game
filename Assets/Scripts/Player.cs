@@ -44,7 +44,8 @@ public class Player: MonoBehaviour
     }
     public void ZeroPhysic()
     {
-        rigidbody2D.velocity = Vector2.zero;
+        if (rigidbody2D != null)
+            rigidbody2D.velocity = Vector2.zero;
     }
     private void Flip()
     {
