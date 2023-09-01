@@ -17,11 +17,6 @@ public class Credits : MonoBehaviour
             creditsPanel.gameObject.SetActive(false);
             particle.transform.position = new Vector3(particle.transform.position.x, particle.transform.position.y, 0);
         }
-        else if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            creditsPanel.gameObject.SetActive(false);
-            particle.transform.position = new Vector3(particle.transform.position.x, particle.transform.position.y, 0);
-        }
     }
 
     public bool IsAnimationPlaying(string animationName)

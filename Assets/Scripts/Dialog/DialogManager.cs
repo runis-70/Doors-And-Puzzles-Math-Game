@@ -9,7 +9,6 @@ public class DialogManager : MonoBehaviour
 {
     [Header("Component DialogCanvas")]
     [SerializeField] private DialogueWindow dialogueWindowPlayer;
-    [SerializeField] private DialogueWindow dialogueWindowNPC;
     [SerializeField] private EffectUIGame background;
     [SerializeField] private InputController inputController;
     [SerializeField] private UIController uIController;
@@ -135,6 +134,17 @@ public class DialogManager : MonoBehaviour
         }      
     }
 
+    public void AnswerOutput(string textAnswer)
+    {
+        if (currentIndexDialogPoint != -1)
+        {
+            StopAllCoroutines();
+            DialogPoint dialogPoint = dialogueScript.dialogPoints[currentIndexDialogPoint];
+            DialogueWindow dialogueWindow = WhoseDialog(dialogPoint.dialog[currentIndexDialog]);
+            dialogueWindow.textDialog.text = textAnswer + dialogPoint.dialog[currentIndexDialog].Answer;
+        }
+    }
+
     private void EnterDrop(Dialog dialog)
     {
         switch (dialog.enterDrop)
@@ -143,8 +153,6 @@ public class DialogManager : MonoBehaviour
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropDown();
-                    else
-                        dialogueWindowNPC.DropDown();
                 }
                 break;
 
@@ -152,24 +160,18 @@ public class DialogManager : MonoBehaviour
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropUp();
-                    else
-                        dialogueWindowNPC.DropUp();
                 }
                 break;
             case DropEnum.DropRight:
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropRight();
-                    else
-                        dialogueWindowNPC.DropRight();
                 }
                 break;
             case DropEnum.DropLeft:
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropLeft();
-                    else
-                        dialogueWindowNPC.DropLeft();
                 }
                 break;
         }
@@ -182,8 +184,6 @@ public class DialogManager : MonoBehaviour
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropDown();
-                    else
-                        dialogueWindowNPC.DropDown();
                 }
                 break;
 
@@ -191,24 +191,18 @@ public class DialogManager : MonoBehaviour
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropUp();
-                    else
-                        dialogueWindowNPC.DropUp();
                 }
                 break;
             case DropEnum.DropRight:
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropRight();
-                    else
-                        dialogueWindowNPC.DropRight();
                 }
                 break;
             case DropEnum.DropLeft:
                 {
                     if (dialog.partnerDialog.gameObject.tag == "Player")
                         dialogueWindowPlayer.DropLeft();
-                    else
-                        dialogueWindowNPC.DropLeft();
                 }
                 break;
         }
@@ -217,7 +211,7 @@ public class DialogManager : MonoBehaviour
     {
         if (dialog.partnerDialog.gameObject.tag == "Player")
             return dialogueWindowPlayer;
-        else
-            return dialogueWindowNPC;
+
+        return null;
     }
 }

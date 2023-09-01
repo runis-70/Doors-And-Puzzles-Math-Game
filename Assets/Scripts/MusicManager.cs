@@ -108,12 +108,12 @@ public class MusicManager : MonoBehaviour
     }
     public void OnPlayOneShotAndEndLast(AudioClip audioClip)
     {
-        Audio.Stop();
+        Stop();
         Audio.PlayOneShot(audioClip);
     }
     public void OnPlayOneShotAndEndLast(int number)
     {
-        Audio.Stop();
+        Stop();
         if (audioClip.Length != 0 & number <= audioClip.Length - 1)
         {
             Audio.PlayOneShot(audioClip[number]);
@@ -121,7 +121,8 @@ public class MusicManager : MonoBehaviour
     }
     public void Stop()
     {
-        Audio.Stop();
+        if (Audio.isPlaying)
+            Audio.Stop();
     }
 
     // Чтобы узнавать ValueSlider

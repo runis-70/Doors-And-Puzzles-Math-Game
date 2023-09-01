@@ -11,7 +11,7 @@ public class ReservationManager : MonoBehaviour
 {
     [SerializeField] private GameObject contentPage;
     [SerializeField] private GameObject DeleteAnswerPanel;
-    [SerializeField] private Fade fade; 
+    [SerializeField] private Fade fade;
     [SerializeField][HideInInspector] private List<PageReservation> pageSafes;
     private ReservationManagerIO saveManagerIO;
     private List<ReservationElementUIData> reservationElementUIDatas;
@@ -21,7 +21,7 @@ public class ReservationManager : MonoBehaviour
 
     private bool isPageManagerActive = false;
 
-    private void Start()
+    private void Awake()
     {
         Initialization();
     }
@@ -135,7 +135,7 @@ public class ReservationManager : MonoBehaviour
                         pageSafes[i].reservationElements[j].ClearSubscribersCreateReservation();
                         pageSafes[i].reservationElements[j].OnClickCreateReservationEvent += (index) =>
                         {
-                           
+
                             AddReservation(index);
                         };
                     }
@@ -309,6 +309,15 @@ onClick.RemoveAllListeners();
                 pageSafes[i].reservationElements[j].OnDrawReservationElement(false);
             }
         }
+    }
+
+    public void ClearAllData()
+    {
+        saveManagerIO = new ReservationManagerIO(Application.persistentDataPath);
+        saveManagerIO.DeleteAll();
+
+        fade.currentIndexScene = SceneManager.GetActiveScene().buildIndex;
+        fade.FadeBlack();
     }
 
     public void AutoReservation()

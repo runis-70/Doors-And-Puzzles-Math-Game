@@ -6,11 +6,14 @@ using UnityEngine.UI;
 
 public class UIController : MonoBehaviour
 {
+    [SerializeField] private GameObject attentionPanel;
     [SerializeField] private MusicManager musicManager;
     public Player playerController;
     public Fade fade;
 
     [SerializeField] private GameObject panels;
+    private ApplicationData applicationData;
+    private string pathToApplicationFile;
 
     private void Update()
     {
@@ -38,6 +41,31 @@ public class UIController : MonoBehaviour
         Time.timeScale = 1;
         musicManager.SoundResurrection(1f);
         fade.FadeWhite();
+
+        pathToApplicationFile = Application.persistentDataPath + $"/ApplicationData.dap";
+        ReservationManagerIO saveManagerIO = new ReservationManagerIO(pathToApplicationFile);
+
+        if (saveManagerIO.LoadReservationApplicationData() == null)
+        {
+            applicationData = new ApplicationData();
+            attentionPanel.SetActive(true);
+        }
+        else
+        {
+            applicationData = saveManagerIO.LoadReservationApplicationData();
+            if (applicationData.isFirstStart == false)
+                attentionPanel.SetActive(false);
+            else
+                attentionPanel.SetActive(true);
+        }
+    }
+
+    public void SetFirstStart(bool value)
+    {
+        ReservationManagerIO saveManagerIO = new ReservationManagerIO(pathToApplicationFile);
+        saveManagerIO = new ReservationManagerIO(pathToApplicationFile);
+        applicationData.isFirstStart = value;
+        saveManagerIO.CreateReservationApplicationData(applicationData);
     }
 
 

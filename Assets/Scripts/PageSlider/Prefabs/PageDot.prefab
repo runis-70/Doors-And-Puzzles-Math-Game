@@ -37,7 +37,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 16, y: 16}
+  m_SizeDelta: {x: 32, y: 32}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3772900299665377287
 CanvasRenderer:
@@ -89,6 +89,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf002eaa449ee6d438ace2cb3e9b583f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _colorDefault: {r: 0, g: 0, b: 0, a: 0}
+  _colorSelected: {r: 0, g: 0, b: 0, a: 0}
   OnActiveStateChanged:
     m_PersistentCalls:
       m_Calls: []

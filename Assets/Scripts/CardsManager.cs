@@ -5,43 +5,38 @@ using UnityEngine.UI;
 
 public class CardsManager : MonoBehaviour
 {
+    [SerializeField] private DialogManager dialogManager;
 
-    public int Cards = 0;
-    public int Podskazka;
-    public int Otvet;
-    public Text CardsText;
-    public Text FichesText;
-    public Text PodskazkaText;
-    public Text OtvetText;
+    [SerializeField] private Text CardsText;
+    [SerializeField] private Text FichesText;
+    [SerializeField] private Text PodskazkaText;
     public GameObject[] PodskazkaIcons;
     public GameObject[] OtvetIcons;
     public GameObject Terminal;
-    public BoxCollider2D col;
     public GameObject TerminalPanel;
     public int DoorIndex;
 
-    void Start()
-    {
-        col = Terminal.GetComponent<BoxCollider2D>();
+    private int countCard = 0;
+    private int AnswerCount;
 
-    }
 
-    public void PlusCards()
+    private void RecountCards(int card)
     {
-        Cards+= 10;
-        CardsText.text = "" + Cards;
+        countCard += card;
+        countCard = Mathf.Clamp(countCard, 0, 1000);
+        CardsText.text = "" + countCard;
     }
 
     public void OtvetBuy()
     {
-        if (Cards >= 20)
+        if (countCard >= 20)
         {
-            Cards -= 30;
-            CardsText.text = "" + Cards;
+            RecountCards(-20);
+            CardsText.text = "" + countCard;
             OtvetIcons[1].SetActive(true);
             OtvetIcons[0].SetActive(false);
             FichesText.text = "Вам выданы были выданы пропуска";
-            Otvet++;
+            AnswerCount++;
         }
        else
         {
@@ -54,14 +49,13 @@ public class CardsManager : MonoBehaviour
 
     public void PodskazkaBuy()
     {
-        if (Cards >= 10)
+        if (countCard >= 10)
         {
-            Cards -= 25;
-            CardsText.text = "" + Cards;
+            countCard -= 25;
+            CardsText.text = "" + countCard;
             PodskazkaIcons[1].SetActive(true);
             PodskazkaIcons[0].SetActive(false);
             FichesText.text = "Вам выданы были выданы пропуска";
-            Podskazka++;
         }
         else
         {
@@ -77,12 +71,12 @@ public class CardsManager : MonoBehaviour
 
     public void MadeOtvet()
     {
-        if (Otvet >= 1)
+        if (AnswerCount >= 1)
         { 
             
             OtvetIcons[0].SetActive(true);
             OtvetIcons[1].SetActive(false);
-            Otvet--;
+            AnswerCount--;
 
             if (DoorIndex == 0)
             {
